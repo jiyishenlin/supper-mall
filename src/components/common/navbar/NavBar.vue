@@ -19,6 +19,14 @@
    height: 44px;
    line-height: 44px;
    box-shadow: 0px 2px 1px rgba(100,100,100,0.2);
+   background-color: var(--color-tint);
+   color: white;
+
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9;
  }
   .left,
   .right{
