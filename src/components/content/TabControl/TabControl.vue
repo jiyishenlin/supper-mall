@@ -21,7 +21,7 @@
     },
     data(){
       return {
-        currIndex:0
+        currIndex: 0
       }
     },
     methods:{

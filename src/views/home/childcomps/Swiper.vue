@@ -3,7 +3,7 @@
     <IcSlider :autoplay="3000">
       <IcSliderItem v-for="items in banners" :key="items.image">
         <a :href="items.link">
-          <img :src="items.image"/>
+          <img :src="items.image" @load="onImageLoad"/>
         </a>
       </IcSliderItem>
     </IcSlider>
@@ -27,13 +27,20 @@
     },
     data(){
       return {
+        isLoad: false
+      }
+    },
+    methods: {
+      onImageLoad(){
+        if(!this.isLoad){
+          this.$emit('onImageLoad')
+          this.isLoad = true
+        }
       }
     }
   }
 </script>
 
 <style scoped>
-  .swiper{
-    padding-top: 44px;
-  }
+
 </style>

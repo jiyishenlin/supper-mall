@@ -10,4 +10,5 @@ module.exports = {
       }
     }
   }
+  //publicPath: '/dist/'//部署到tomcat上需要，dist作为项目文件夹
 }
