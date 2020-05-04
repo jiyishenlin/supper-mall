@@ -5,6 +5,7 @@ const Home = () => import("../views/home/Home");/*懒加载方式*/
 const Category = () => import("../views/category/Category");/*懒加载方式*/
 const Cart = () => import("../views/cart/Cart");/*懒加载方式*/
 const Profile = () => import("../views/profile/Profile");/*懒加载方式*/
+const Detail = () => import("../views/detail/Detail");/*懒加载方式*/
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,10 @@ const routes = [
   {
     path: '/profile',
     component: Profile
+  },
+  {
+    path: '/detail/:iid',
+    component: Detail
   }
 ]
 

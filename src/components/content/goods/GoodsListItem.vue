@@ -1,8 +1,6 @@
 <template>
-  <div class="good-list-item">
-    <a :href="good.link">
-    <img :src="good.show.img"/>
-    </a>
+  <div class="good-list-item" @click="goodClick">
+    <img :src="resrc" @load="imgLoad" />
     <div class="good-info">
       <p>{{good.title}}</p>
       <span class="price">{{good.price}}</span>
@@ -22,8 +20,23 @@
         }
       }
     },
-    created() {
+    computed:{
+      resrc(){
+        if(this.good.show == undefined){
+          return this.good.image
+        }else{
+          return this.good.show.img
+        }
 
+      }
+    },
+    methods: {
+      imgLoad(){
+        this.$bus.$emit('goodImgLoad1')
+      },
+      goodClick(){
+        this.$router.push('/detail/'+this.good.iid)
+      }
     }
   }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="back-top">
-    <img src="~assets/img/home/BackTop.svg" alt="">
+    <img src="~assets/img/home/top.svg" alt="">
   </div>
 </template>
 
@@ -20,6 +20,9 @@
   .back-top img{
     width: 30px;
     height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #f4f4f4;
+    border-radius: 15px;
   }
   .is-active{
     display: block;
